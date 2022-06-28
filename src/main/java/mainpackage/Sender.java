@@ -255,7 +255,7 @@ public class Sender {
         }
     }
 
-    public static void distinctProducts() {
+    public static List<String> distinctProducts() {
         try {
             var productFactory = MyProductFactory.loadFromTextFile("products-temp.csv");
 
@@ -278,11 +278,14 @@ public class Sender {
 
             Console.writeLine("--------------------");
 
-            products.stream().distinct().forEach(Console::writeLine);
+            List<String> strings=new ArrayList<>();
+            products.stream().distinct().forEach((val)->strings.add(val.toString()));
+            return strings;
         }
         catch (Throwable ex) {
             ex.printStackTrace();
         }
+        return null;
     }
 
     public static void giveMeRandomProducts() {

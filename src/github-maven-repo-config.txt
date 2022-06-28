@@ -1,5 +1,5 @@
 
-mvn install:install-file -DgroupId=com.kaplan -DartifactId=kaplan-socket-stream -Dversion=1.0.0 -Dfile=/Users/barankaplan/Desktop/github/kaplan-socket/target/kaplan-socket-1.0-SNAPSHOT.jar -Dpackaging=jar -DgeneratePom=true -DlocalRepositoryPath=. -DcreateChecksum=true
+mvn install:install-file -DgroupId=com.kaplan -DartifactId=kaplan-socket-stream -Dversion=1.1.0 -Dfile=/Users/barankaplan/Desktop/github/kaplan-socket/target/kaplan-socket-stream-1.1.0.jar -Dpackaging=jar -DgeneratePom=true -DlocalRepositoryPath=. -DcreateChecksum=true
 
 
 git add -A . && git commit -m "released version 1.0.0"
