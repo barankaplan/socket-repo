@@ -3,7 +3,7 @@
   <groupId>com.kaplan</groupId>
   <artifactId>kaplan-socket</artifactId>
   <versioning>
-    <lastUpdated>20220628184319</lastUpdated>
+    <lastUpdated>20220628184941</lastUpdated>
     <snapshot>
       <localCopy>true</localCopy>
     </snapshot>
@@ -11,12 +11,12 @@
       <snapshotVersion>
         <extension>jar</extension>
         <value>1.0-SNAPSHOT</value>
-        <updated>20220628184319</updated>
+        <updated>20220628184941</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>pom</extension>
         <value>1.0-SNAPSHOT</value>
-        <updated>20220628184319</updated>
+        <updated>20220628184941</updated>
       </snapshotVersion>
     </snapshotVersions>
   </versioning>
