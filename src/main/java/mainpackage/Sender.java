@@ -255,9 +255,9 @@ public class Sender {
         }
     }
 
-    public static List<String> distinctProducts() {
+    public static List<String> distinctProducts(String textFile) {
         try {
-            var productFactory = MyProductFactory.loadFromTextFile("products-temp.csv");
+            var productFactory = MyProductFactory.loadFromTextFile(textFile);
 
 
             var n = Console.readInt("Enter a value between 100 and 200:");
