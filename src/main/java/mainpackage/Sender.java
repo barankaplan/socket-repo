@@ -254,9 +254,44 @@ public class Sender {
             ex.printStackTrace();
         }
     }
+    public static List<String> distinctProducts(String textFile,int n) {
+        try {
+            //"products-temp.csv"
+            var productFactory = MyProductFactory.loadFromTextFile(textFile);
+
+
+//            var n = Console.readInt("Enter a value between 100 and 200:");
+            var products = new ArrayList<ProductInfo>();
+
+            var random = new Random();
+
+            //clonable ile farkli nesne referanslari döndürüpbunlari equals ve hashcode ile ayirt ediyoruz!
+            //yani 1 numarali satidaki veri diger satirdaki 1 numara ile ayni
+            //senaryoda farkli kopyalar cikarip equals ve hash code lar ile bunu sagladik !
+
+            IntStream.range(0, n)
+                    .mapToObj(i -> productFactory.getRandomProduct(random))
+                    .filter(Optional::isPresent)
+                    .map(Optional::get)
+                    .forEach(products::add);
+            products.forEach(Console::writeLine);
+
+            Console.writeLine("--------------------");
+
+            List<String> strings=new ArrayList<>();
+            products.stream().distinct().forEach((val)->strings.add(val.toString()));
+            return strings;
+        }
+        catch (Throwable ex) {
+            ex.printStackTrace();
+        }
+        return null;
+    }
+
 
     public static List<String> distinctProducts(String textFile) {
         try {
+            //"products-temp.csv"
             var productFactory = MyProductFactory.loadFromTextFile(textFile);
 
 
